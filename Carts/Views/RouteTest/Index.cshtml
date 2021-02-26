@@ -1,0 +1,47 @@
+﻿@model List<Carts.Models.RouteTest.TempProducts>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //宣告商品列表
+    //IList<Carts.Models.RouteTest.TempProducts> productList =
+    //    new List<Carts.Models.RouteTest.TempProducts>();
+
+    //productList.Add(new Carts.Models.RouteTest.TempProducts
+    //{
+    //    ID = 1,
+    //    Name = "自動鉛筆",
+    //    Price = 30.0m
+    //});
+
+    //productList.Add(new Carts.Models.RouteTest.TempProducts
+    //{
+    //    ID = 2,
+    //    Name = "記事本",
+    //    Price = 50.0m
+    //});
+
+    //productList.Add(new Carts.Models.RouteTest.TempProducts
+    //{
+    //    ID = 3,
+    //    Name = "橡皮擦",
+    //    Price = 10.0m
+    //});
+
+}
+
+<h2>商品列表</h2>
+<table class="table">
+    <thead><tr><td>編號</td><td>名稱</td><td>售價</td></tr></thead>
+    <tbody>
+        @foreach (var pd in this.Model)
+        {
+            <tr>
+                <td>@pd.ID</td>
+                <td>@pd.Name</td>
+                <td>@pd.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
